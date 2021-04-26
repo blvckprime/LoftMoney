@@ -20,5 +20,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(newActivity);
             }
         }};
+
+    //TODO: here we go again (and work with recyclerView)
+
     }
 }
