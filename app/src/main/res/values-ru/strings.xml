@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ЛофтДеньги</string>
+    <string name="AddItem">Добавить</string>
+    <string name="Edit_Text_Price_Hint">Цена</string>
+    <string name="Edit_Text_Name_Hint">Название</string>
+    <string name="b_enter_wlcm_scrn" >Войти</string>
+</resources>
