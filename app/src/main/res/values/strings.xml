@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LoftMoney</string>
+    <string name="addItem">Add</string>
+    <string name="edit_Text_Name_Hint">Name</string>
+    <string name="edit_Text_Price_Hint">Price</string>
+    <string name="b_enter_wlcm_scrn">Enter</string>
 </resources>
