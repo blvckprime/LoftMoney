@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="24dp"
+    android:paddingTop="28dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="28dp">
+
+    <TextView
+        android:id="@+id/rv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#666664"
+        android:textSize="20sp"
+        tools:text="Зубная щетка" />
+
+    <TextView
+        android:id="@+id/rv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="end"
+        android:textColor="#4a90e2"
+        android:textSize="20sp"
+        tools:text="70р" />
+
+
+</LinearLayout>

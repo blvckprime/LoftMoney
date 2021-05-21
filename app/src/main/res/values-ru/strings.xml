@@ -4,5 +4,5 @@
     <string name="addItem">Добавить</string>
     <string name="edit_Text_Price_Hint">Цена</string>
     <string name="edit_Text_Name_Hint">Название</string>
-    <string name="b_enter_wlcm_scrn" >Войти</string>
+
 </resources>

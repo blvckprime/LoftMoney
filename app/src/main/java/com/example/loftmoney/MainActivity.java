@@ -1,30 +1,64 @@
 package com.example.loftmoney;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.example.loftmoney.cells.Item;
+import com.example.loftmoney.cells.ItemClickInterface;
+import com.example.loftmoney.cells.ItemsAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = findViewById(R.id.b_enter_wlcm_scrn);
+        TabLayout tabLayout = findViewById(R.id.tabs);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newActivity = new Intent(MainActivity.this, AddItemActivity.class);
-                startActivity(newActivity);
-            }
-        });
+        ViewPager viewPager = findViewById(R.id.viewpager);
+        viewPager.setAdapter(new BudgetPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT));
+
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setText(R.string.expences);
+        tabLayout.getTabAt(1).setText(R.string.income);
+    }
+
+    static class BudgetPagerAdapter extends FragmentPagerAdapter {
+
+        public BudgetPagerAdapter(@NonNull final FragmentManager fm, final int behavior) {
+            super(fm, behavior);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(final int position) {
+            return new BudgetFragment();
+        }
+
+        @Override
+        public int getCount() {
+            return 2;
+        }
     }
 
 }
