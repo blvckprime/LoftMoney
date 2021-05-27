@@ -3,5 +3,7 @@
     <string name="addItem">Add</string>
     <string name="edit_Text_Name_Hint">Name</string>
     <string name="edit_Text_Price_Hint">Price</string>
-    <string name="b_enter_wlcm_scrn">Enter</string>
+    <string name="expences">Expenses</string>
+    <string name="income">Income</string>
+    <string name="price_with_currency" translatable="false">%s ₽</string>
 </resources>
