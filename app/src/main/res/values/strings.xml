@@ -3,7 +3,7 @@
     <string name="addItem">Add</string>
     <string name="edit_Text_Name_Hint">Name</string>
     <string name="edit_Text_Price_Hint">Price</string>
-    <string name="expences">Расходы</string>
-    <string name="income">Доходы</string>
-    <string name="price_with_currency">%s Р</string>
+    <string name="expences">Expenses</string>
+    <string name="income">Income</string>
+    <string name="price_with_currency" translatable="false">%s ₽</string>
 </resources>

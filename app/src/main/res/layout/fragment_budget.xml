@@ -13,8 +13,8 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_item_fab"
-        android:layout_width="66dp"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:backgroundTint="#FFC107"

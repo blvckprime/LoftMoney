@@ -3,6 +3,7 @@ package com.example.loftmoney;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,9 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.loftmoney.cells.Item;
 import com.example.loftmoney.cells.ItemsAdapter;
@@ -20,6 +23,17 @@ public class BudgetFragment extends Fragment {
 
     private static final int REQUEST_CODE = 100;
     private ItemsAdapter mAdapter;
+    private static final String COLOR_ID = "colorId";
+    private static final String TYPE = "fragmentType";
+
+    public static BudgetFragment newInstance(final int colorId, final String type) {
+        BudgetFragment budgetFragment = new BudgetFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt(COLOR_ID, colorId);
+        bundle.putString(TYPE, type);
+        budgetFragment.setArguments(bundle);
+        return budgetFragment;
+    }
 
     @Nullable
     @Override
@@ -41,7 +55,20 @@ public class BudgetFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler);
 
-        mAdapter = new ItemsAdapter();
+        DividerItemDecoration verticalDecoration = new DividerItemDecoration(recyclerView.getContext(),
+                DividerItemDecoration.HORIZONTAL);
+        Drawable verticalDivider = ContextCompat.getDrawable(getActivity(), R.drawable.vertical_divider);
+        verticalDecoration.setDrawable(verticalDivider);
+        recyclerView.addItemDecoration(verticalDecoration);
+
+        DividerItemDecoration horizontalDecoration = new DividerItemDecoration(recyclerView.getContext(),
+                DividerItemDecoration.VERTICAL);
+        Drawable horizontalDivider = ContextCompat.getDrawable(getActivity(), R.drawable.horizontal_divider);
+        horizontalDecoration.setDrawable(horizontalDivider);
+
+        recyclerView.addItemDecoration(horizontalDecoration);
+
+        mAdapter = new ItemsAdapter(getArguments().getInt(COLOR_ID));
         recyclerView.setAdapter(mAdapter);
 
         mAdapter.setData(new Item("Молоко", 70));

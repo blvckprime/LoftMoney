@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.loftmoney.R;
@@ -18,12 +19,17 @@ import java.util.List;
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHolder> {
 
     private List<Item> items = new ArrayList<>();
+    private final int colorId;
+
+    public ItemsAdapter(final int colorId) {
+        this.colorId = colorId;
+    }
 
     @Override
 
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = View.inflate(parent.getContext(), R.layout.rv_items_layout, null);
-        return new ItemViewHolder(itemView);
+        return new ItemViewHolder(itemView, colorId);
     }
 
     @Override
@@ -47,11 +53,14 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
         private TextView name;
         private TextView price;
 
-        public ItemViewHolder(View itemView) {
+        public ItemViewHolder(@NonNull final View itemView, final int colorId) {
             super(itemView);
 
             name = itemView.findViewById(R.id.rv_name);
             price = itemView.findViewById(R.id.rv_price);
+
+            final Context context = price.getContext();
+            price.setTextColor(ContextCompat.getColor(context, colorId));
         }
 
         public void bind(final Item item) {

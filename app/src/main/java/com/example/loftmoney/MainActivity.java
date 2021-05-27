@@ -28,6 +28,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String EXPENSE = "expense";
+    public static final String INCOME = "income";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +55,14 @@ public class MainActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment getItem(final int position) {
-            return new BudgetFragment();
+            switch (position) {
+                case 0:
+                    return BudgetFragment.newInstance(R.color.sky_blue, EXPENSE);
+                case 1:
+                    return BudgetFragment.newInstance(R.color.apple_green, INCOME);
+                default:
+                    return null;
+            }
         }
 
         @Override
