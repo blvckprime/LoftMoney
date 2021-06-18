@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".screens.main.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
@@ -18,8 +18,8 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:backgroundTint="#FFC107"
-        android:contentDescription="Add item button"
-        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="Add moneyItem button"
+        android:src="@drawable/ic_add"
         app:borderWidth="0dp"
         app:tint="@android:color/white" />
 

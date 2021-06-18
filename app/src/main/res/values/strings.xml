@@ -1,9 +1,29 @@
 <resources>
     <string name="app_name">LoftMoney</string>
+    <string name="expences_hint">Expenses</string>
+
+
     <string name="addItem">Add</string>
     <string name="edit_Text_Name_Hint">Name</string>
     <string name="edit_Text_Price_Hint">Price</string>
-    <string name="expences">Expenses</string>
+
     <string name="income">Income</string>
     <string name="price_with_currency" translatable="false">%s ₽</string>
+    <string name="activity_main_toolbar_title">Учёт бюджета</string>
+    <string name="action_login">Войти</string>
+    <string name="connection_lost">Соединение потеряно</string>
+    <string name="client_id">185171345565-8fl3tmkh47i7p02mucs88tu8fft4q6oh.apps.googleusercontent.com</string>
+    <string name="client_secret">qczBwwfZSeZ1ydoWVNthZooU</string>
+
+    <string name="title_expense">Расходы</string>
+    <string name="title_incomes">Доходы</string>
+    <string name="title_balance">Баланс</string>
+    <string name="title_dashboard">Учет бюджета</string>
+    <string name="selected">Выделено: </string>
+    <string name="delete_items_title">Вы уверены?</string>
+    <string name="delete_items_message">Вы точно хотите удалить выбранные расходы?</string>
+    <string name="action_no">Нет</string>
+    <string name="action_yes">Да</string>
+    <string name="fill_fields">Заполните все поля!</string>
+    <string name="success_added">Успешно добавлено!</string>
 </resources>

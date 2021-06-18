@@ -11,7 +11,8 @@
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:paddingTop="29dp"
-        android:paddingBottom="29dp">
+        android:paddingBottom="29dp"
+        android:backgroundTint="@color/white">
 
         <TextView
             android:id="@+id/rv_name"
@@ -22,7 +23,8 @@
             android:textSize="20sp"
             android:fontFamily="sans-serif"
             android:textColor="@color/gray"
-            tools:text="Зубная щетка"/>
+            tools:text="Зубная щетка"
+            android:backgroundTint="@color/white"/>
 
         <TextView
             android:id="@+id/rv_price"
@@ -34,7 +36,8 @@
             android:fontFamily="sans-serif"
             android:textStyle="bold"
             android:textColor="@color/sky_blue"
-            tools:text="70 ₽"/>
+            tools:text="70 ₽"
+            android:backgroundTint="@color/white"/>
 
     </RelativeLayout>
 
